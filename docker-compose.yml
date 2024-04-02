@@ -1,0 +1,7 @@
+version: "3.0"
+services:
+  memos:
+      image: xun/tgbot:latest
+      build:
+        context: .
+        dockerfile: ./docker/Dockerfile

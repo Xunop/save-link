@@ -6,8 +6,18 @@ If the link is rss feed, it will save the feed to the [miniflux](https://github.
 
 ## Installation
 
+### Manual
+
 ```bash
 python -m venv venv # create a virtual environment
 source venv/bin/activate # activate the virtual environment
 pip install -r requirements.txt # install the dependencies
+python bot.py
+```
+
+### Docker
+
+```bash
+mv config-example.py config.py
+docker compose up -d
 ```

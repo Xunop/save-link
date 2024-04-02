@@ -228,4 +228,8 @@ def edit_link_visibility(link_id, visibility):
 
 
 bot.add_custom_filter(IsAdmin())
-bot.infinity_polling()
+while(True):
+    try:
+        bot.infinity_polling()
+    except:
+        pass
