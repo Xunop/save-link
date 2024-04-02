@@ -1,3 +1,6 @@
 TOKEN = ''
 USERID = ''
 SLASH_TOKEN = ''
+SLASH_URL = ''
+MINIFLUX_URL = ''
+MINIFLUX_TOKEN = ''
