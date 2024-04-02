@@ -12,6 +12,7 @@ If the link is rss feed, it will save the feed to the [miniflux](https://github.
 python -m venv venv # create a virtual environment
 source venv/bin/activate # activate the virtual environment
 pip install -r requirements.txt # install the dependencies
+mv config-example.py config.py
 python bot.py
 ```
 
