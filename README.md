@@ -19,6 +19,11 @@ python bot.py
 ### Docker
 
 ```bash
-mv config-example.py config.py
 docker compose up -d
 ```
+
+## TODO
+
+- [x] Set visibility of the link
+- [ ] Add rss feed to miniflux
+- [ ] Show unread articles from miniflux
