@@ -2,7 +2,7 @@ import telebot
 import requests
 import json
 from telebot import types
-from config import TOKEN, USERID
+from config import TOKEN, USERID, SLASH_TOKEN
 
 bot = telebot.TeleBot(TOKEN)
 
@@ -119,7 +119,7 @@ def push_url_to_slash(link: Link) -> str:
     })
     headers = {
         'Content-Type': 'application/json',
-        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6InYxIiwidHlwIjoiSldUIn0.eyJuYW1lIjoieHVuNzk0QGdtYWlsLmNvbSIsImlzcyI6InNsYXNoIiwic3ViIjoiMSIsImF1ZCI6WyJ1c2VyLmFjY2Vzcy10b2tlbiJdLCJpYXQiOjE3MTE5Nzc3OTR9.zlpJ9IMfq-kH4Gc0sjlpMMBzqioANJOy-SQDR313rW8'
+        'Authorization': 'Bearer' + SLASH_TOKEN
     }
 
     response = requests.request("POST", url, headers=headers, data=payload)
@@ -138,7 +138,7 @@ def edit_link_visibility(link_id, visibility):
     })
     headers = {
         'Content-Type': 'application/json',
-        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6InYxIiwidHlwIjoiSldUIn0.eyJuYW1lIjoieHVuNzk0QGdtYWlsLmNvbSIsImlzcyI6InNsYXNoIiwic3ViIjoiMSIsImF1ZCI6WyJ1c2VyLmFjY2Vzcy10b2tlbiJdLCJpYXQiOjE3MTE5Nzc3OTR9.zlpJ9IMfq-kH4Gc0sjlpMMBzqioANJOy-SQDR313rW8'
+        'Authorization': 'Bearer' + SLASH_TOKEN
     }
 
     response = requests.request("PUT", url, headers=headers, data=payload)
