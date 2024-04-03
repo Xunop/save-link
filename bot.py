@@ -117,8 +117,7 @@ def save_rss_feed(message):
     bot.reply_to(message, "Feed saved with id %s" % feed_id)
 
 
-@ bot.message_handler(is_admin=True, regexp='https?://[\\w.-]+[/\\w+]?')
-# @bot.message_handler(func=lambda message: True)
+@bot.message_handler(is_admin=True, regexp='https?://[\\w.-]+[/\\w+]?')
 def save_url(message):
     # print(message.text)
     key_words = message.text.split()
@@ -231,5 +230,6 @@ bot.add_custom_filter(IsAdmin())
 while(True):
     try:
         bot.infinity_polling()
-    except:
-        pass
+    # If keyboard interrupt is pressed
+    except KeyboardInterrupt:
+        break

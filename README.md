@@ -25,5 +25,5 @@ docker compose up -d
 ## TODO
 
 - [x] Set visibility of the link
-- [ ] Add rss feed to miniflux
+- [x] Add rss feed to miniflux
 - [ ] Show unread articles from miniflux
